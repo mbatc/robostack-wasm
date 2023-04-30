@@ -7,7 +7,7 @@ echo Installing Miniconda
 
 SCRIPT_DIR=$(dirname "$0")
 
-mkdir $SCRIPT_DIR/../downloads
+mkdir -p $SCRIPT_DIR/../downloads
 
 # download installers
 cd $SCRIPT_DIR/../downloads
