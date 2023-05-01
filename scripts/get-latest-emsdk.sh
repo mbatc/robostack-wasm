@@ -13,10 +13,9 @@ echo Reset to origin/main
 
 cd emsdk
 git fetch --all
-git checkout -force main
+git checkout --force main
 git reset --hard origin/main
-git submodule init --recursive
-git submodule update --recursive
+git submodule update --init --recursive
 
 echo Install latest sdk
 

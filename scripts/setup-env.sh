@@ -25,6 +25,9 @@ echo Configuring channels
 
 mamba create -n $ROS_ENV_NAME ros-$ROS_DISTRO-desktop python=3.10 -c robostack-staging -c conda-forge --no-channel-priority --override-channels
 
+echo Installing pip and boa
+mamba install pip boa -c conda-forge
+
 conda activate $ROS_ENV_NAME
 
 echo Configuring channels
