@@ -16,7 +16,7 @@ vinca: vinca-select-platform ## Generate recipes using vinca
 	vinca
 
 vinca-m: vinca-select-platform ## Generate recipes using vinca (multiple)
-	rm -r "$(ROS_REPO)/recipes"
+	rm -r -f "$(ROS_REPO)/recipes"
 	cd "$(ROS_REPO)";\
 	vinca -m
 

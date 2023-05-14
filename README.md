@@ -10,3 +10,10 @@ This repo contains tools and documentation created while implementing a WebAssem
 |-|-|
 | Description | A basic c++ application which is cross-compiled to Web Assembly |
 | Location | ./hello-wasm/ |
+
+## 2. ROS Package
+
+| Date | 12/05/2023 |
+|-|-|
+| Description | Cross compiled the rclcpp library to Web Assembly. |
+| Location |./rclcpp-wasm/ |
