@@ -1,6 +1,6 @@
 ROS_ENV_NAME=robostackenv
 ROS_DISTRO=humble
-VINCA_CONFIG=vinca_linux_64.yaml
+VINCA_CONFIG=vinca_wasm.yaml
 
 ROS_REPO=ros-$(ROS_DISTRO)
 

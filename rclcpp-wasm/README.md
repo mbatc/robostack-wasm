@@ -13,3 +13,5 @@ https://answers.ros.org/question/363112/how-to-see-compiler-invocation-in-colcon
 https://discourse.cmake.org/t/how-to-debug-detecting-c-compiler-abi-info-hanging-cygwin-on-github-actions/4580
 https://github.com/adevaykin/minimal-cmake-emscripten-project
 https://cmake.org/cmake/help/book/mastering-cmake/chapter/Cross%20Compiling%20With%20CMake.html
+https://github.com/irobot-ros/ros2-cross-compilation
+https://stackoverflow.com/questions/38419876/cmake-generate-config-h-like-from-autoconf
