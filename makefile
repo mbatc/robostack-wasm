@@ -5,10 +5,10 @@ VINCA_CONFIG=vinca_wasm.yaml
 ROS_REPO=ros-$(ROS_DISTRO)
 
 build: vinca ## Build the packages using boa
-	boa build "$(ROS_REPO)" -m "$(ROS_REPO)/.ci_support/conda_forge_pinnings.yaml" -m "$(ROS_REPO)/conda_build_config.yaml"
+	boa build "$(ROS_REPO)" --target-platform emscripten-32 -m "$(ROS_REPO)/.ci_support/conda_forge_pinnings.yaml" -m "$(ROS_REPO)/conda_build_config.yaml"
 
 build-m: vinca-m ## Build the packages using boa (multiple)
-	boa build "$(ROS_REPO)/recipes/" -m "$(ROS_REPO)/.ci_support/conda_forge_pinnings.yaml" -m "$(ROS_REPO)/conda_build_config.yaml"
+	boa build "$(ROS_REPO)/recipes/" --target-platform emscripten-32 -m "$(ROS_REPO)/.ci_support/conda_forge_pinnings.yaml" -m "$(ROS_REPO)/conda_build_config.yaml"
 
 vinca: vinca-select-platform ## Generate recipes using vinca
 	rm -f "$(ROS_REPO)/recipe.yaml"
