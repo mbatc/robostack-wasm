@@ -1,9 +1,0 @@
-[submodule "ros-humble"]
-	path = ros-humble
-	url = https://github.com/mbatc/ros-humble.git
-[submodule "vinca"]
-	path = vinca
-	url = https://github.com/mbatc/vinca.git
-[submodule "rclcpp-wasm/rclcpp"]
-	path = rclcpp-wasm/rclcpp
-	url = https://github.com/ros2/rclcpp.git

@@ -1,0 +1,8 @@
+name: pyjs-wasm-env
+channels:
+  - https://repo.mamba.pm/emscripten-forge
+  - conda-forge
+dependencies:
+  - pyjs == 0.11.1
+  - numpy
+  - pyb2d

@@ -7,10 +7,10 @@ echo Installing Miniconda
 
 SCRIPT_DIR=$(dirname "$0")
 
-mkdir -p $SCRIPT_DIR/../downloads
+mkdir -p /tmp/emrobostack
 
 # download installers
-cd $SCRIPT_DIR/../downloads
+cd /tmp/emrobostack
 curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-installer.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 
@@ -25,4 +25,7 @@ echo Installing mamba
 conda install mamba -c conda-forge
 
 echo Installing pip and boa
-mamba install pip boa -c conda-forge
+mamba install pip
+
+python -m pip install git+https://github.com/DerThorsten/boa.git@python_api --ignore-installed
+python -m pip install git+https://github.com/mbatc/vinca.git@mbatchelor/emscripten --ignore-installed
