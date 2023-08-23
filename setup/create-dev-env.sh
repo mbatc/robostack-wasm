@@ -30,5 +30,20 @@ mamba install mesa-libgl-devel-cos7-x86_64 mesa-dri-drivers-cos7-x86_64 libselin
 echo Installing pip and boa
 mamba install pip
 
-python -m pip install git+https://github.com/DerThorsten/boa.git@python_api --ignore-installed
-python -m pip install git+https://github.com/mbatc/vinca.git@mbatchelor/emscripten --ignore-installed
+python -m pip install git+https://github.com/DerThorsten/boa.git@python_api --no-deps --ignore-installed
+
+python -m pip install git+https://github.com/mbatc/vinca.git@mbatchelor/emscripten  --no-deps--ignore-installed
+
+python -m pip install git+https://github.com/DerThorsten/bitfurnace.git@emscripten_new --no-deps --ignore-installed
+
+playwright install
+
+git clone https://github.com/emscripten-core/emsdk.git ~/emsdk
+
+~/emsdk/emsdk install latest
+
+~/emsdk/emsdk activate latest
+
+echo 'source "/home/mbatc/emsdk/emsdk_env.sh"' >> $HOME/.bashrc
+
+echo '/home/mbatc/emsdk' > $HOME/.emsdkdir

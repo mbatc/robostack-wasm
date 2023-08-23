@@ -26,6 +26,3 @@ conda install mamba -c conda-forge
 
 echo Installing pip and boa
 mamba install pip
-
-python -m pip install git+https://github.com/DerThorsten/boa.git@python_api --ignore-installed
-python -m pip install git+https://github.com/mbatc/vinca.git@mbatchelor/emscripten --ignore-installed
