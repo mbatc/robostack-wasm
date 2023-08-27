@@ -18,6 +18,7 @@ if [ "$SPECIFIC_PACKAGE" == ""]; then
     "uncrustify"
     "benchmark"
     "spdlog"
+    "yaml"
   )
 
   for dep in ${DEPS_LIST[@]}; do

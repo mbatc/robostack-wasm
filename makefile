@@ -1,41 +1,27 @@
-ROS_ENV_NAME=robostackenv
-ROS_DISTRO=humble
-VINCA_CONFIG=vinca_wasm.yaml
+ROBOSTACK_DIR := $(shell cat .robostack-dir)
+VINCA_DIR := $(shell cat .vinca-dir)
+EMFORGE_DIR := $(shell cat .emforge-dir)
 
-ROS_REPO=ros-$(ROS_DISTRO)
+build-host: ## Build the packages for the host platform using boa
+	./build/host.sh $(ROBOSTACK_DIR)
 
-build: vinca ## Build the packages using boa
-	boa build "$(ROS_REPO)" --target-platform emscripten-32 -m "$(ROS_REPO)/.ci_support/conda_forge_pinnings.yaml" -m "$(ROS_REPO)/conda_build_config.yaml"
+build-target: ## Build the packages for the target platform (emscripten-32) using boa
+	./build/target.sh $(ROBOSTACK_DIR)
 
-build-m: vinca-m ## Build the packages using boa (multiple)
-	boa build "$(ROS_REPO)/recipes/" --target-platform emscripten-32 -m "$(ROS_REPO)/.ci_support/conda_forge_pinnings.yaml" -m "$(ROS_REPO)/conda_build_config.yaml"
+recipes-host: ## Generate recipes for the host platform using Vinca.
+	./build/recipes-host.sh $(ROBOSTACK_DIR)
 
-vinca: vinca-select-platform ## Generate recipes using vinca
-	rm -f "$(ROS_REPO)/recipe.yaml"
-	cd "$(ROS_REPO)";\
-	vinca
+recipes-target: ## Generate ROS2 recipes for the target platform using Vinca.
+	./build/recipes.sh $(ROBOSTACK_DIR)
 
-vinca-m: vinca-select-platform ## Generate recipes using vinca (multiple)
-	rm -r -f "$(ROS_REPO)/recipes"
-	cd "$(ROS_REPO)";\
-	vinca -m
+emforge: ## Build additional ROS2 dependencies that from emscripten forge.
+	./build/emforge-deps.sh $(EMFORGE_DIR)
 
-vinca-select-platform: ## Copy the platform specific vinca script
-	rm -f "$(ROS_REPO)/vinca.yaml"
-	cp "$(ROS_REPO)/$(VINCA_CONFIG)" "ros-$(ROS_DISTRO)/vinca.yaml"
+install-vinca:
+	python -m pip install $(VINCA_DIR)/
 
 install-tools: ## Install tools RoboStack depends on
 	./scripts/install-tools.sh
-
-get-emsdk: ## Get and install the latest emscripten sdk
-	./scripts/get-latest-emsdk.sh
-
-setup-env: ## Create a conda environment for use with RoboStack
-	bash ./scripts/setup-env.sh "$(ROS_ENV_NAME)" "$(ROS_DISTRO)"
-
-clean-env: ## Remove the conda environment configured by 'setup-env'
-	./scripts/clean-env.sh "$(ROS_ENV_NAME)"
-	rm -f activate-env.sh
 
 .PHONY: help
 help:
