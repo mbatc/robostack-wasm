@@ -21,8 +21,6 @@ These are used in the [makefile](./makefile) to locate the repos.
 
 Run `make help` to list helpful commands for generating recipes and building packages.
 
-> The [makefile](./makefile) depends on a  files which contain the path to the emscripten-forge, robostack flavour, and vinca repos respectively.
-
 # Project Milestones
 
 ## 1. Hello WASM
