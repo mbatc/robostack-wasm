@@ -12,9 +12,9 @@ To get started clone the dependencies,
 and create 3 files, `.emforge-dir`, `.robostack-dir`, and `.vinca-dir` containing the path to each repo. e.g.
 
 ```sh
-echo -n PATH_TO_EMSCRIPTENT_FORGE_REPO > .robostack-dir
+echo -n PATH_TO_EMSCRIPTENT_FORGE_REPO > .emforge-dir
 echo -n PATH_TO_ROBOSTACK_REPO > .robostack-dir
-echo -n PATH_TO_VINCA_REPO > .robostack-dir
+echo -n PATH_TO_VINCA_REPO > .vinca-dir
 ```
 
 These are used in the [makefile](./makefile) to locate the repos.
