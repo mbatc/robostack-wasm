@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 INITIAL_DIR=$(cd)
 

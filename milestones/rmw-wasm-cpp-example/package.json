@@ -1,0 +1,13 @@
+{
+  "name": "rmw-wasm-cpp-example",
+  "version": "1.0.0",
+  "description": "Test js app using rmw-wasm-cpp ROS2 middleware",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "./pack.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Batchelor",
+  "license": "ISC"
+}
