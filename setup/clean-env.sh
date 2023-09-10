@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-eval "$(conda shell.bash hook)"
+
+eval "$(micromamba shell hook --shell bash)"
 
 ENV_NAME=$1
 
-conda deactivate
-conda deactivate
-conda remove -n $ENV_NAME --all
+micromamba deactivate
+micromamba deactivate
+micromamba remove -n $ENV_NAME --all

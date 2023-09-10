@@ -1,0 +1,4 @@
+dependencies:
+  - ros-humble-rmw-wasm-cpp
+  - ros-humble-wasm-cpp
+
