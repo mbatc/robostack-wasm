@@ -28,13 +28,21 @@ async function makePyJS(print, error) {
 
 const Module = {};
 
-(async function () {
+window.onload = async function(){
+  const statusText = document.getElementById("load-status-text");
+  statusText.textContent = "Downloading data";
+
   console.log("Download data ...");
   const pyjs = await makePyJS(print, print);
+
+  statusText.textContent = "Initialising pyjs";
   try {
     await pyjs.init();
+    statusText.textContent = "Done!";
   } catch (error) {
     console.error(error);
+    statusText.textContent = "Failed to init pyjs: " + error;
   }
   console.log("...done");
-})();
+};
+
