@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. ~/.bashrc
+
 eval "$(micromamba shell hook --shell bash)"
 
 SCRIPT_DIR=$(dirname "$0")
@@ -25,8 +27,6 @@ micromamba config append channels conda-forge --env
 micromamba config append channels robostack-staging --env
 # and the emscripten forge channel
 micromamba config append channels https://repo.mamba.pm/emscripten-forge --env
-# and the robostack channel
-micromamba config append channels $PREFIX/conda-bld --env
 # remove the defaults channel just in case, this might return an error if it is not in the list which is ok
 micromamba config remove channels defaults --env
 

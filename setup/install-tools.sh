@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#!/usr/bin/env bash
 
 echo Installing Python
 sudo apt-get install make
@@ -38,6 +37,6 @@ fi
 ~/emsdk/emsdk install 3.1.27
 ~/emsdk/emsdk activate 3.1.27
 
-echo 'source "/home/mbatc/emsdk/emsdk_env.sh"' >> $HOME/.bashrc
+echo "source $HOME/emsdk/emsdk_env.sh" >> $HOME/.bashrc
 
-echo '/home/mbatc/emsdk' > $HOME/.emsdkdir
+echo -n $HOME/emsdk > $HOME/.emsdkdir
