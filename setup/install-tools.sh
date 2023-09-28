@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash -i
 
 echo Installing Python
 sudo apt-get install make

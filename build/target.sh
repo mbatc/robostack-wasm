@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash -i
 
 ROBOSTACK_DIR=$1
 

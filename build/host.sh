@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash -i
 
 # Build for host platform first so we can install required dependencies
 boa build "../ros-humble/recipes/" \

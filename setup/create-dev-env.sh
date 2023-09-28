@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-. ~/.bashrc
+#!/bin/bash -i
 
 eval "$(micromamba shell hook --shell bash)"
 

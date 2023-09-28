@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash -i
 
 export INITIAL_DIR=$(cd)
 export FORGE_PATH="$1"
