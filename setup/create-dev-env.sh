@@ -15,7 +15,7 @@ micromamba create \
     -n $ROS_ENV_NAME \
     -c https://repo.mamba.pm/emscripten-forge \
     -c conda-forge \
-    -c robostack-staging
+    -c robostack-staging -y
 
 micromamba activate $ROS_ENV_NAME
 
@@ -28,11 +28,11 @@ micromamba config append channels https://repo.mamba.pm/emscripten-forge --env
 # remove the defaults channel just in case, this might return an error if it is not in the list which is ok
 micromamba config remove channels defaults --env
 
-micromamba install compilers cmake pkg-config make ninja colcon-common-extensions
-micromamba install mesa-libgl-devel-cos7-x86_64 mesa-dri-drivers-cos7-x86_64 libselinux-cos7-x86_64 libxdamage-cos7-x86_64 libxxf86vm-cos7-x86_64 libxext-cos7-x86_64 xorg-libxfixes
+micromamba install compilers cmake pkg-config make ninja colcon-common-extensions -y
+micromamba install mesa-libgl-devel-cos7-x86_64 mesa-dri-drivers-cos7-x86_64 libselinux-cos7-x86_64 libxdamage-cos7-x86_64 libxxf86vm-cos7-x86_64 libxext-cos7-x86_64 xorg-libxfixes -y
 
 echo Installing pip and boa
-micromamba install pip
+micromamba install pip -y
 
 python -m pip install git+https://github.com/DerThorsten/boa.git@python_api --no-deps --ignore-installed
 

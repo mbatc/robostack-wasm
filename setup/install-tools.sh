@@ -25,10 +25,10 @@ source ~/.bashrc
 eval "$(micromamba shell hook --shell bash)"
 
 echo Installing mamba
-micromamba install mamba -c conda-forge
+micromamba install mamba -c conda-forge -y
 
 echo Installing pip
-micromamba install pip
+micromamba install pip -y
 
 if [ ! -d "~/emsdk" ]; then
   git clone https://github.com/emscripten-core/emsdk.git ~/emsdk

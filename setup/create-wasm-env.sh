@@ -21,7 +21,7 @@ micromamba create \
     -f $SCRIPT_DIR/../envs/emrobostack.yaml  \
     -n $ROS_ENV_NAME \
     -c https://repo.mamba.pm/emscripten-forge \
-    -c https://repo.mamba.pm/conda-forge
+    -c https://repo.mamba.pm/conda-forge -y
 
 micromamba activate $ROS_ENV_NAME
 
