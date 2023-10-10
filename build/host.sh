@@ -1,6 +1,7 @@
 #!/bin/bash -i
 
-# Build for host platform first so we can install required dependencies
-boa build "../ros-humble/recipes/" \
-  -m "../ros-humble/.ci_support/conda_forge_pinnings.yaml" \
-  -m "../ros-humble/conda_build_config.yaml"\
+ROBOSTACK_DIR=$1
+
+boa build "$ROBOSTACK_DIR/recipes/" \
+  -m "$ROBOSTACK_DIR/.ci_support/conda_forge_pinnings.yaml" \
+  -m "$ROBOSTACK_DIR/conda_build_config.yaml"

@@ -23,6 +23,7 @@ if [ "$SPECIFIC_PACKAGE" == "" ]; then
     "benchmark"
     "spdlog"
     "yaml"
+    "console_bridge"
   )
   
   for dep in ${DEPS_LIST[@]}; do
