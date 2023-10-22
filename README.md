@@ -21,6 +21,8 @@ These are used in the [makefile](./makefile) to locate the repos.
 
 Run `make help` to list helpful commands for generating recipes and building packages.
 
+ROS2 packages I've built using these tools can be found in [mbatc/ros2-wasm-binaries](https://github.com/mbatc/ros2-wasm-binaries.git). 
+
 # Project Milestones
 
 ## 1. Hello WASM
