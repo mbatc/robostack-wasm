@@ -24,6 +24,9 @@ source ~/.bashrc
 
 eval "$(micromamba shell hook --shell bash)"
 
+echo Activating base environment
+micromamba activate
+
 echo Installing mamba
 micromamba install mamba -c conda-forge -y
 
