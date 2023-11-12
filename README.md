@@ -23,6 +23,13 @@ Run `make help` to list helpful commands for generating recipes and building pac
 
 ROS2 packages I've built using these tools can be found in [mbatc/ros2-wasm-binaries](https://github.com/mbatc/ros2-wasm-binaries.git). 
 
+# Docs
+
+* [Setup](./docs/Setup.md)
+* [Design](./docs/Design.md)
+* [Issues](./docs/Issues.md)
+* [Porting Conda Forge Packages](./docs/PortingCondaForgePackages.md)
+
 # Project Milestones
 
 ## 1. Hello WASM
