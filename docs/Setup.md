@@ -117,6 +117,5 @@ micromamba activate emrobostack-dev
 ./milestones/rmw-wasm-cpp-example/pack.sh emrobostack
 
 # Host the packed environment/site on a local web server.
-python -m http.server 8080 --bind 127.0.0.1 --directory milestones/rmw-
-wasm-cpp-example/dist
+python -m http.server 8080 --bind 127.0.0.1 --directory milestones/rmw-wasm-cpp-example/dist
 ```
