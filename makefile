@@ -5,7 +5,7 @@ EMFORGE_DIR := $(shell cat .emforge-dir)
 build-host: ## Build the packages for the host platform using boa
 	./build/host.sh $(ROBOSTACK_DIR)
 
-build-target: ## Build the packages for the target platform (emscripten-32) using boa
+build-target: ## Build the packages for the target platform (emscripten-wasm32) using boa
 	./build/target.sh $(ROBOSTACK_DIR)
 
 recipes-host: ## Generate recipes for the host platform using Vinca.
