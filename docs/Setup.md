@@ -2,8 +2,7 @@
 
 1. To install the required tools run `setup/install-tools.sh` and follow the prompts. This will install,
     * Python3
-    * Miniconda3
-    * Mamba
+    * Micromamba
     * Pip
 
    Resources are downloaded to `/tmp/emrobostack/`. This will be deleted on reboot.
@@ -27,10 +26,10 @@ Before building ROS2 packages with robostack first you will need to build some d
 ## Build ROS2 Packages
 
 Clone https://github.com/mbatc/ros-humble.git@emscripten and cd into the repo.
-  1. Create a symbolic link to the `vinca_emscripten32.yaml` vinca file. You can use `ln vinca_emscripten32.yaml vinca.yaml` to do this.
-  2. Run `vinca -m --platform=emscripten-32` to generate the recipes.
+  1. Create a symbolic link to the `vinca_emscripten32.yaml` vinca file. You can use `ln vinca_emscripten32.yaml vinca.yaml` to do this. Add your conda-bld directory in the vinca.yaml
+  2. Run `vinca -m --platform=emscripten-wasm32` to generate the recipes.
   4. `cd` into the `recipes` folder created by vinca.
-  5. Run `boa build . --target-platform emscripten-32 -m ../.ci_support/conda_forge_pinnings.yaml -m ../conda_build_config.yaml`
+  5. Run `boa build . --target-platform emscripten-wasm32 -m ../.ci_support/conda_forge_pinnings.yaml -m ../conda_build_config.yaml`
 
 Alternatively, you can use the scripts in the [build](../build/) folder to build packages.
   1. Run `build/recipes.sh PATH_TO_ROS_HUMBLE` to generate the recipes.
@@ -67,7 +66,7 @@ echo -n ../emscripten-forge-recipes/ > .emforge-dir
 . ~/.bashr
 ./setup/create-dev-env.sh
 
-# Activate the new environment and select the emscripten-32 configuration for vinca
+# Activate the new environment and select the emscripten-wasm32 configuration for vinca
 micromamba activate emrobostack-dev
 ln ../ros-humble/vinca_emscripten32.yaml ../ros-humble/vinca.yaml
 ```
@@ -92,7 +91,7 @@ cp -r ../ros-humble/additional_recipes/ros-humble-wasm-cpp ../ros-
 humble/recipes
 cp -r ../ros-humble/additional_recipes/dynmsg ../ros-humble/recipes
 
-# Build everything for emscripten-32
+# Build everything for emscripten-wasm32
 make build-target
 ```
 
@@ -101,11 +100,11 @@ make build-target
 This example uses the config files in `milestones/rmw-wasm-cpp-example` to package a WASM environment. Feel free to take this and modify it for your needs.
 
 ```sh
-# Create emscripten-32 environment which we can install WASM packages to
+# Create emscripten-wasm32 environment which we can install WASM packages to
 ./setup/create-wasm-env.sh
 
-# Activate the emscripten-32 environment and install some packages (from deps.yaml)
-# Note that you can install any emscripten-32 packages you like.
+# Activate the emscripten-wasm32 environment and install some packages (from deps.yaml)
+# Note that you can install any emscripten-wasm32 packages you like.
 micromamba activate emrobostack
 micromamba install --file=milestones/rmw-wasm-cpp-example/deps.yaml
 

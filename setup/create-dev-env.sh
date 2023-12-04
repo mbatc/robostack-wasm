@@ -28,17 +28,13 @@ micromamba config append channels https://repo.mamba.pm/emscripten-forge --env
 # remove the defaults channel just in case, this might return an error if it is not in the list which is ok
 micromamba config remove channels defaults --env
 
-micromamba install compilers cmake pkg-config make ninja colcon-common-extensions -y
+micromamba install compilers cmake pkg-config make ninja colcon-common-extensions make pip git -y
 micromamba install mesa-libgl-devel-cos7-x86_64 mesa-dri-drivers-cos7-x86_64 libselinux-cos7-x86_64 libxdamage-cos7-x86_64 libxxf86vm-cos7-x86_64 libxext-cos7-x86_64 xorg-libxfixes -y
 
-echo Installing pip and boa
-micromamba install pip -y
-
-python -m pip install git+https://github.com/DerThorsten/boa.git@python_api --no-deps --ignore-installed
+python -m pip install git+https://github.com/DerThorsten/boa.git@python_api_v2 --no-deps --ignore-installed
 
 python -m pip install git+https://github.com/mbatc/vinca.git@mbatchelor/emscripten --ignore-installed
 
 python -m pip install git+https://github.com/DerThorsten/bitfurnace.git@emscripten_new --no-deps --ignore-installed
 
 playwright install
-

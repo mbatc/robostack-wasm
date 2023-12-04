@@ -16,6 +16,7 @@ if [ "$SPECIFIC_PACKAGE" == "" ]; then
   echo "Build all"
   DEPS_LIST=(
     "pcre"
+    "fmt"
     "cppcheck"
     "gtest"
     "yaml-cpp"
@@ -25,14 +26,14 @@ if [ "$SPECIFIC_PACKAGE" == "" ]; then
     "yaml"
     "console_bridge"
   )
-  
+
   for dep in ${DEPS_LIST[@]}; do
     echo Building Package: ${dep}
-    python "builder.py" build explicit "recipes/recipes_emscripten/${dep}" --emscripten-32
+    python "builder.py" build explicit "recipes/recipes_emscripten/${dep}" --emscripten-wasm32
   done
 else
   echo Building specific package: ${SPECIFIC_PACKAGE}
-  python "builder.py" build explicit "recipes/recipes_emscripten/${SPECIFIC_PACKAGE}" --emscripten-32
+  python "builder.py" build explicit "recipes/recipes_emscripten/${SPECIFIC_PACKAGE}" --emscripten-wasm32
 fi
 
 

@@ -4,6 +4,6 @@ INITIAL_DIR=$(cd)
 
 cd $1
 
-vinca -m --platform=emscripten-32
+vinca -m --platform=emscripten-wasm32
 
 cd $INITIAL_DIR
