@@ -1,0 +1,11 @@
+name: emrobostack-kernel
+channels:
+  - https://repo.mamba.pm/emscripten-forge
+  - conda-forge
+#   - /home/tobias/mambaforge/envs/emrobostack-dev/conda-bld/
+  - https://repo.mamba.pm/robostack-wasm
+dependencies:
+  - numpy
+  - matplotlib
+  - ipycanvas
+  - ros-humble-rclpy

@@ -5,9 +5,9 @@ This repo contains tools and documentation created while implementing a WebAssem
 The scripts depend on forks of [Vinca](https://github.com/RoboStack/vinca), [robostack](https://github.com/RoboStack/ros-humble), and [emscripten forge](https://github.com/emscripten-forge/recipes). 
 
 To get started clone the dependencies,
-  * https://github.com/mbatc/emscripten-forge-recipes@ROS2Recipes
-  * https://github.com/mbatc/ros-humble@mbatchelor/emscripten
-  * https://github.com/mbatc/vinca.git@emscripten
+  * https://github.com/mbatc/emscripten-forge-recipes@fixes_tobi
+  * https://github.com/mbatc/ros-humble@tobi_fixes
+  * https://github.com/mbatc/vinca.git@fixes_tobi
 
 and create 3 files, `.emforge-dir`, `.robostack-dir`, and `.vinca-dir` containing the path to each repo. e.g.
 
@@ -45,3 +45,8 @@ ROS2 packages I've built using these tools can be found in [mbatc/ros2-wasm-bina
 |-|-|
 | Description | Cross compiled the rclcpp library to Web Assembly. |
 | Location |./rclcpp-wasm/ |
+
+## 3. JupyterLite build
+
+- Just run `jupyter lite build --XeusPythonEnv.empack_config=empack_config.yaml` in the [./milestones/rmw-wasm-cpp-example](./milestones/rmw-wasm-cpp-example) folder
+- 

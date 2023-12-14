@@ -1,3 +1,6 @@
 .emforge-dir
 .robostack-dir
 .vinca-dir
+
+.jupyterlite.doit.db
+_output/
