@@ -21,7 +21,7 @@ These are used in the [makefile](./makefile) to locate the repos.
 
 Run `make help` to list helpful commands for generating recipes and building packages.
 
-ROS2 packages I've built using these tools can be found in [mbatc/ros2-wasm-binaries](https://github.com/mbatc/ros2-wasm-binaries.git). 
+ROS2 packages I've built using these tools can be found in [robostack-wasm](https://repo.mamba.pm/robostack-wasm). 
 
 # Docs
 
@@ -49,4 +49,3 @@ ROS2 packages I've built using these tools can be found in [mbatc/ros2-wasm-bina
 ## 3. JupyterLite build
 
 - Just run `jupyter lite build --XeusPythonEnv.empack_config=empack_config.yaml` in the [./milestones/rmw-wasm-cpp-example](./milestones/rmw-wasm-cpp-example) folder
-- 
