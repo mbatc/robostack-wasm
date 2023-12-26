@@ -26,7 +26,7 @@ Before building ROS2 packages with robostack first you will need to build some d
 ## Build ROS2 Packages
 
 Clone https://github.com/mbatc/ros-humble.git@emscripten and cd into the repo.
-  1. Create a symbolic link to the `vinca_emscripten32.yaml` vinca file. You can use `ln vinca_emscripten32.yaml vinca.yaml` to do this. Add your conda-bld directory in the vinca.yaml
+  1. Create a symbolic link to the `vinca_emscripten32.yaml` vinca file. You can use `ln -s vinca_emscripten32.yaml vinca.yaml` to do this. Add your conda-bld directory in the vinca.yaml
   2. Run `vinca -m --platform=emscripten-wasm32` to generate the recipes.
   4. `cd` into the `recipes` folder created by vinca.
   5. Run `boa build . --target-platform emscripten-wasm32 -m ../.ci_support/conda_forge_pinnings.yaml -m ../conda_build_config.yaml`
