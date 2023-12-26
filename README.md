@@ -5,9 +5,9 @@ This repo contains tools and documentation created while implementing a WebAssem
 The scripts depend on forks of [Vinca](https://github.com/RoboStack/vinca), [robostack](https://github.com/RoboStack/ros-humble), and [emscripten forge](https://github.com/emscripten-forge/recipes). 
 
 To get started clone the dependencies,
-  * https://github.com/mbatc/emscripten-forge-recipes@fixes_tobi
-  * https://github.com/mbatc/ros-humble@tobi_fixes
-  * https://github.com/mbatc/vinca.git@fixes_tobi
+  * `git clone https://github.com/mbatc/emscripten-forge-recipes -b fixes_tobi`
+  * `git clone https://github.com/mbatc/ros-humble -b tobi_fixes`
+  * `git clone https://github.com/mbatc/vinca.git -b fixes_tobi`
 
 and create 3 files, `.emforge-dir`, `.robostack-dir`, and `.vinca-dir` containing the path to each repo. e.g.
 
