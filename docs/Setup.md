@@ -27,7 +27,7 @@ Alternatively, you can use the scripts in the [build](../build/) folder to build
   1. Run `build/recipes.sh PATH_TO_ROS_HUMBLE` to generate the recipes.
   2. Run `build/target.sh PATH_TO_ROS_HUMBLE` to build for emscripten.
 
-# Commands
+# Commands (outdated)
 
 Below you can find all the commands you need to run to get ROS building from a fresh install of Linux
 
@@ -102,6 +102,5 @@ micromamba activate emrobostack-dev
 ./milestones/rmw-wasm-cpp-example/pack.sh emrobostack
 
 # Host the packed environment/site on a local web server.
-```
 python -m http.server 8080 --bind 127.0.0.1 --directory milestones/rmw-wasm-cpp-example/dist
 ```
