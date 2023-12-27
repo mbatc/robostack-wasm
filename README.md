@@ -47,5 +47,5 @@ ROS2 packages I've built using these tools can be found in [robostack-wasm](http
 | Location |./rclcpp-wasm/ |
 
 ## 3. JupyterLite build
-
-- Just run `jupyter lite build --XeusPythonEnv.empack_config=empack_config.yaml` in the [./milestones/rmw-wasm-cpp-example](./milestones/rmw-wasm-cpp-example) folder
+- First, `micromamba install -c conda-forge jupyterlite-xeus-python` in your emscripten-forge environment
+- Then, run `jupyter lite build --XeusPythonEnv.empack_config=empack_config.yaml` in the [./milestones/rmw-wasm-cpp-example](./milestones/rmw-wasm-cpp-example) folder
