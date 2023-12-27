@@ -1,19 +1,3 @@
-Here I've just documented various issues I've encountered throughout this project.
-
-# Emscripten Forge
-
-## Outdated Local build Documentation
-
-The setup guide I was following for emscripten forged had the following issues.
-
-### Version Mismatch in .emsdkdir
-___
-
-The version used when piping the install location to .emsdkdir is hardcoded. You may need to double check that the directory is correct for the version of emsdk you are using.
-
-For example, my file contained `/home/mbatc/.cache/empack/emsdk-3.1.2` when it should have instead been `/home/mbatc/.cache/empack/emsdk-3.1.45`
-
-
 # Fix Common Build Issues
 
 Below are some common build issues and the fixes/workarounds for these.
