@@ -147,6 +147,7 @@ packages:
       - pattern: '**/*.dist-info/METADATA'
 default:
   include_patterns:
+    - pattern: 'grammar.lark'
     - pattern: '*.so'
     - pattern: '*.so.*'
     - pattern: '*.py'
