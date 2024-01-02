@@ -145,9 +145,17 @@ packages:
       - pattern: 'html/**'
       - pattern: 'external/**'
       - pattern: '**/*.dist-info/METADATA'
+  ros-humble-rosidl-parser:
+    include_patterns:
+      - pattern: '*.lark'
+      - pattern: '*.so'
+      - pattern: '*.so.*'
+      - pattern: '*.py'
+      - pattern: '*.json'
+
 default:
   include_patterns:
-    - pattern: 'grammar.lark'
+    - pattern: '*.lark'
     - pattern: '*.so'
     - pattern: '*.so.*'
     - pattern: '*.py'

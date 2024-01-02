@@ -10,5 +10,10 @@ dependencies:
   - ipycanvas
   - ipywidgets
   - jupyterlab_widgets
+  - ros-humble-osrf-testing-tools-cpp
+  - ros-humble-rcutils
   - ros-humble-rclpy
+  - ros-humble-rosidl-parser
   - ros-humble-std-msgs
+  - ros-humble-wasm-cpp
+  - ros-humble-rmw-wasm-cpp

@@ -5,6 +5,7 @@
 3. Follow https://github.com/mbatc/emscripten-forge-recipes/tree/fixes_tobi#local-builds to create a conda environment configured for building ROS packages. Then, install these additional packages in the newly created environment:
 4. `micromamba install compilers cmake pkg-config make ninja colcon-common-extensions make pip git`
 5. `micromamba install catkin_pkg ruamel.yaml rosdistro empy requests networkx rich`
+6. `micromamba install jupyterlab_server`
 
 
 # Building RoboStack Packages Locally
