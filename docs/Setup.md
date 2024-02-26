@@ -52,8 +52,7 @@ sudo apt-get install lbzip2 -y
 # Clone required repositories
 git clone https://github.com/mbatc/robostack-wasm.git
 git clone -b mbatchelor/emscripten https://github.com/mbatc/ros-humble.git
-git clone -b ROS2Recipes https://github.com/mbatc/emscripten-forge-
-recipes.git
+git clone -b ROS2Recipes https://github.com/mbatc/emscripten-forge-recipes.git
 
 # Setup paths for Robostack-WASM makefile
 cd robostack-wasm
