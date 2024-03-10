@@ -40,7 +40,7 @@ sudo apt-get update -y
 sudo apt-get install curl git lbzip2 -y
 
 # Clone required repositories
-git clone -b fixes_tobi https://github.com/mbatc/robostack-wasm.git
+git clone -b main https://github.com/mbatc/robostack-wasm.git
 git clone -b tobi_fixes https://github.com/mbatc/ros-humble.git
 git clone -b fixes_tobi https://github.com/mbatc/emscripten-forge-recipes.git
 
