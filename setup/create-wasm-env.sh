@@ -17,7 +17,7 @@ if [ "$SRC_ROS_ENV_NAME" = "" ]; then
 fi
 
 micromamba create \
-    --platform=emscripten-32 \
+    --platform=emscripten-wasm32 \
     -f $SCRIPT_DIR/../envs/emrobostack.yaml  \
     -n $ROS_ENV_NAME \
     -c https://repo.mamba.pm/emscripten-forge \
@@ -27,7 +27,7 @@ micromamba activate $ROS_ENV_NAME
 
 # this adds the conda-forge channel to the new created environment configuration
 micromamba config append channels https://repo.mamba.pm/emscripten-forge --env
-# add the local conda-bld that contains the emscripten-32 packages
+# add the local conda-bld that contains the emscripten-wasm32 packages
 micromamba config append channels $MAMBA_ROOT_PREFIX/envs/$SRC_ROS_ENV_NAME/conda-bld --env
 # this adds the conda-forge channel to the new created environment configuration
 micromamba config append channels conda-forge --env

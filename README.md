@@ -5,9 +5,9 @@ This repo contains tools and documentation created while implementing a WebAssem
 The scripts depend on forks of [Vinca](https://github.com/RoboStack/vinca), [robostack](https://github.com/RoboStack/ros-humble), and [emscripten forge](https://github.com/emscripten-forge/recipes). 
 
 To get started clone the dependencies,
-  * https://github.com/mbatc/emscripten-forge-recipes@ROS2Recipes
-  * https://github.com/mbatc/ros-humble@mbatchelor/emscripten
-  * https://github.com/mbatc/vinca.git@emscripten
+  * `git clone https://github.com/mbatc/emscripten-forge-recipes -b fixes_tobi`
+  * `git clone https://github.com/mbatc/ros-humble -b tobi_fixes`
+  * `git clone https://github.com/mbatc/vinca.git -b fixes_tobi`
 
 and create 3 files, `.emforge-dir`, `.robostack-dir`, and `.vinca-dir` containing the path to each repo. e.g.
 
@@ -21,7 +21,7 @@ These are used in the [makefile](./makefile) to locate the repos.
 
 Run `make help` to list helpful commands for generating recipes and building packages.
 
-ROS2 packages I've built using these tools can be found in [mbatc/ros2-wasm-binaries](https://github.com/mbatc/ros2-wasm-binaries.git). 
+ROS2 packages I've built using these tools can be found in [robostack-wasm](https://repo.mamba.pm/robostack-wasm). 
 
 # Docs
 
@@ -45,3 +45,7 @@ ROS2 packages I've built using these tools can be found in [mbatc/ros2-wasm-bina
 |-|-|
 | Description | Cross compiled the rclcpp library to Web Assembly. |
 | Location |./rclcpp-wasm/ |
+
+## 3. JupyterLite build
+- First, `micromamba install -c conda-forge jupyterlite-xeus-python` in your emscripten-forge environment
+- Then, run `jupyter lite build --XeusPythonEnv.empack_config=empack_config.yaml` in the [./milestones/rmw-wasm-cpp-example](./milestones/rmw-wasm-cpp-example) folder
